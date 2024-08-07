@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+class Algebra1{
+    int a;
+    int b;
+
+    Algebra1(int x, int y){
+        System.out.println("The constructor of algebra class called");
+        a=x;
+        b=y;
+    }
+
+    int add(){
+        return a+b;
+    }
+
+    int sub(){
+        return a-b;
+    }
+
+    int mul(){
+        return a*b;
+    }
+
+    int div(){
+        return a/b;
+    }
+
+}
+
+
+public class Constructor {
+    public static void main(String[] args) {
+        Algebra1 obj= new Algebra1(5,6);
+        //Scanner sc= new Scanner(System.in);
+
+//        int a= sc.nextInt();
+
+//        int b= sc.nextInt();
+
+        System.out.println("The sum of two numbers is:");
+        int ans=obj.add();
+        System.out.println(ans);
+
+        System.out.println(obj.sub());
+        System.out.println(obj.mul());
+        System.out.println(obj.div());
+
+
+
+
+
+        Algebra1 obj2= new Algebra1(10,20);
+
+        System.out.println("The sum of two numbers is:");
+        int ans1=obj2.add();
+        System.out.println(ans1);
+
+        System.out.println(obj2.sub());
+        System.out.println(obj2.mul());
+        System.out.println(obj2.div());
+    }
+}
