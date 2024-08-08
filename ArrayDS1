@@ -1,0 +1,133 @@
+class ArrayExamples{
+
+    void multiArray(){
+        int [][] arr_1= new int[2][3];
+        int[][] arr={{56,45,67},{23,34,78},{31,98,69}};
+
+//        System.out.println(arr[0][0]);
+//        System.out.println(arr[0][1]);
+//        System.out.println(arr[0][2]);
+//
+//        System.out.println(arr[1][0]);
+//        System.out.println(arr[1][1]);
+//        System.out.println(arr[1][2]);
+//
+//        System.out.println(arr[2][0]);
+//        System.out.println(arr[2][1]);
+//        System.out.println(arr[2][2]);
+
+//        for(int i=0; i<3; i++){
+//            for(int j=0; j<3; j++){
+//                System.out.println(arr[i][j]);
+//            }
+//        }
+
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++){
+                System.out.println(arr[i][j]);
+            }
+        }
+
+        System.out.println(arr.length);
+    }
+
+
+
+
+    void demoArrays(){
+        int[] ages= new int[3];
+        float[] weights= new float[5];
+        String[] names= new String[3];
+
+        ages[0]= 12;
+        ages[1]= 13;
+        ages[2]= 14;
+      // ages[5]= 21;
+
+        weights[0]= 67.8f;
+        weights[1]= 61.8f;
+        weights[2]= 56.8f;
+        weights[3]= 78.8f;
+        weights[4]= 100.8f;
+
+        names[0]="Arran";
+        names[1]="Ronaldo";
+        names[2]="GOAT";
+
+//        for(int i=0; i<3; i++){
+//            System.out.println(names[i]);
+//        }
+
+        //for each loop
+        for(String name: names){
+            System.out.println(name);
+        }
+
+
+        System.out.println(ages[0]);
+        System.out.println(ages[1]);
+        System.out.println(ages[2]);
+
+        System.out.println(weights[0]);
+        System.out.println(weights[1]);
+        System.out.println(weights[2]);
+        System.out.println(weights[3]);
+        System.out.println(weights[4]);
+
+        System.out.println(ages.length);
+
+
+
+
+    }
+
+    void SumOfArr(){
+        int[] arr={1,4,6,8,10};
+        int sum=0;
+        for(int i=0; i< arr.length; i++){
+            sum += arr[i];
+        }
+        System.out.println(sum);
+    }
+
+    void maxOfArray(){
+        int[] arr={1,5,2,8,3,9,4};
+        int ans=0;
+        for(int i=0; i< arr.length; i++){
+            if(arr[i]>ans){
+                ans=arr[i];
+            }
+        }
+        System.out.println("Max: "+ans);
+    }
+
+
+
+
+    void SearchInArr(){
+        int[] arr={1,2,3,4,5,6,7,8,6,9};
+        int x=6;
+        int ans= -1;
+//linear search
+        for(int i=0; i< arr.length; i++){
+            if(arr[i]==x){
+                ans= i;
+                break;
+            }
+        }
+        System.out.println("Found"+" "+x+" "+"at index"+ans);
+    }
+}
+
+
+public class Array {
+    public static void main(String[] args) {
+        ArrayExamples obj = new ArrayExamples();
+        //obj.demoArrays();
+        //obj.multiArray();
+        //obj.SumOfArr();
+        //obj.maxOfArray();
+        obj.SearchInArr();
+
+    }
+}
