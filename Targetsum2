@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+class ArrayQQQQ1{
+    Scanner sc= new Scanner(System.in);
+
+    static void PrintArr(int[] arr){
+        for(int i=0; i< arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+    static int PairSum(int[] arr, int target){
+        int n= arr.length;
+        int ans=0;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                for(int k=j+1; k<n; k++){
+                    if(arr[i]+ arr[j] + arr[k]== target){
+                        ans++;
+                    }
+                }
+
+            }
+        }
+
+        return ans;
+    }
+
+    void FindTargetSum(){
+        System.out.println("Enter the size of Array: ");
+        int n= sc.nextInt();
+        int[] arr= new int[n];
+
+        System.out.println("Enter"+" "+n+" "+" "+"Elements");
+        for(int i=0; i< arr.length; i++){
+            arr[i]= sc.nextInt();
+        }
+        System.out.println("Your Array is: ");
+        PrintArr(arr);
+
+        System.out.println("Enter the sum you want: ");
+        int target= sc.nextInt();
+
+        PairSum(arr, target);
+        System.out.println("The target sum is : ");
+        System.out.println(PairSum(arr, target));
+
+
+
+    }
+}
+
+
+
+public class TargetSum2 {
+    public static void main(String[] args) {
+        ArrayQQQQ1 obj= new ArrayQQQQ1();
+        obj.FindTargetSum();
+    }
+}
