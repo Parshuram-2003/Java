@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class ArrayQQ{
+    Scanner sc= new Scanner(System.in);
+
+    static void PrintArr(int[] arr){
+        for(int i=0; i< arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+
+
+    static int lastOccurrence(int[] arr, int x){
+        int lastIndex= -1;
+        for(int i=0; i< arr.length; i++) {
+            if (arr[i] == x) {
+                lastIndex = i;
+            }
+        }
+        return lastIndex;
+    }
+
+
+    void FindLastOccurrence(){
+        System.out.println("Enter the size of Array: ");
+        int n= sc.nextInt();
+        int[] arr= new int[n];
+
+        System.out.println("Enter"+" "+n+" "+" "+"Elements");
+        for(int i=0; i< arr.length; i++){
+            arr[i]= sc.nextInt();
+        }
+        System.out.println("Your Array is: ");
+        PrintArr(arr);
+
+        System.out.println("Enter the element you want to you want to find the last index: ");
+        int x= sc.nextInt();
+
+        lastOccurrence(arr, x);
+        System.out.println("The last index of your element is: ");
+        System.out.println(lastOccurrence(arr, x));
+    }
+
+}
+
+
+
+public class ArrayQ2 {
+    public static void main(String[] args) {
+        ArrayQQ obj= new ArrayQQ();
+        obj.FindLastOccurrence();
+    }
+}
