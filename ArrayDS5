@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+class ArrayQQQ{
+    Scanner sc= new Scanner(System.in);
+
+    static void PrintArr(int[] arr){
+        for(int i=0; i< arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+    static int countOccurrences(int[] arr, int x){
+        int count=0;
+        for(int i=0; i< arr.length; i++){
+            if(arr[i]>x){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    void CountStrictlyGreater(){
+        int n= sc.nextInt();
+        int[] arr= new int[n];
+
+        System.out.println("Enter"+" "+n+" "+" "+"Elements");
+        for(int i=0; i< arr.length; i++){
+            arr[i]= sc.nextInt();
+        }
+        System.out.println("Your Array is: ");
+        PrintArr(arr);
+
+        System.out.println("Enter the element you want: ");
+        int x= sc.nextInt();
+
+        countOccurrences(arr, x);
+        System.out.println("The number of count element strictly greater than your element is: ");
+        System.out.println(countOccurrences(arr, x));
+
+
+
+    }
+}
+
+
+public class ArrayQ3 {
+    public static void main(String[] args) {
+        ArrayQQQ obj= new ArrayQQQ();
+        obj.CountStrictlyGreater();
+    }
+}
