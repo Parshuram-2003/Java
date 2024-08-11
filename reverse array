@@ -1,0 +1,59 @@
+public class ReverseArray {
+    static void PrintArr(int[] arr){
+        for(int i=0; i< arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+
+
+    //1st method
+//swap array by creating another array
+    static int[] reverseArray(int[] arr){
+
+        int n= arr.length;
+        int[] ans= new int[n];
+        int j=0;
+
+        for(int i=n-1; i>=0; i--){
+            ans[j++]=arr[i];
+        }
+
+        return ans;
+    }
+
+    //2nd method
+    //Swap array in array itself
+    static void swapInArray(int[] arr2, int i, int j){
+        int temp= arr2[i];
+        arr2[i]= arr2[j];
+        arr2[j]= temp;
+    }
+
+
+    static void reverseInArray(int [] arr2){
+        int i=0, j=arr2.length-1;
+
+        while(i<j){
+            swapInArray(arr2, i, j);
+            i++;
+            j--;
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] arr= {1,2,3,4,5};
+        PrintArr(arr);
+
+        //1st method
+//        int[] ans= reverseArray(arr);
+//        PrintArr(ans);
+
+        //2nd method
+        reverseInArray(arr);
+        PrintArr(arr);
+
+    }
+}
