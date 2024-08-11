@@ -1,0 +1,38 @@
+public class Swap {
+    //Method 1
+    static void SwappingWithoutTemp(int c, int d){
+        System.out.println("value of c before swapping: "+c);
+        System.out.println("value of d before swapping: "+d);
+
+        c = c+d;
+        d= c-d;
+        c= c-d;
+
+        System.out.println("value of c after swapping: "+c);
+        System.out.println("value of d after swapping: "+d);
+    }
+
+    //Meth0d 2
+    static void Swapping(int a, int b){
+        System.out.println("value of a before swapping: "+a);
+        System.out.println("value of b before swapping: "+b);
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("value of a after swapping: "+a);
+        System.out.println("value of b after swapping: "+b);
+    }
+    public static void main(String[] args) {
+        //Method 2 function call
+        int a=9;
+        int b=3;
+        Swapping(a, b);
+
+        //Method 1 function call
+        int c= 10;
+        int d= 20;
+        SwappingWithoutTemp(c, d);
+    }
+}
